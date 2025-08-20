@@ -1,6 +1,6 @@
 # 🚀 TypeScript Migration Example
 
-JavaScript에서 TypeScript로의 마이그레이션 과정을 보여주는 실습 프로젝트 예제 모음입니다.
+JavaScript에서 TypeScript로 마이그레이션하는 프로젝트의 예제입니다.
 
 ## 📁 프로젝트 구조
 
@@ -9,15 +9,15 @@ JavaScript에서 TypeScript로의 마이그레이션 과정을 보여주는 실�
 ```
 ts-migration-example/
 ├── javascript/          # 1️⃣ 순수 JavaScript 프로젝트
-├── typescript/          # 2️⃣ TypeScript 마이그레이션
+├── typescript/          # 2️⃣ TypeScript ✅ 마이그레이션
 ├── react-jsx/           # 3️⃣ React + JSX 프로젝트
-├── react-tsx/           # 4️⃣ React + TypeScript (TSX)
+├── react-tsx/           # 4️⃣ React + TypeScript (TSX) ✅ 마이그레이션
 └── README.md            # 현재 파일
 ```
 
 ## 🎯 목표
 
-- JavaScript에서 TypeScript로 프로젝트를 마이그레이션하는 예시를 코드로 이해
+- 마이그레이션을 예시 코드로 이해
 - 타입 안전성의 이점 체험
 
 ## 마이그레이션 예제
@@ -46,12 +46,6 @@ npm install
 npm run dev
 ```
 
-**주요 개선사항:**
-- `User`, `UserUpdate` 인터페이스 정의
-- 메서드 매개변수와 반환값에 타입 지정
-- `null`/`undefined` 안전성 향상
-- 타입 기반 자동완성
-
 ### 3️⃣ React + JSX
 - **위치**: `./react-jsx/`
 - **기술 스택**: React 18, JSX, JavaScript
@@ -59,15 +53,10 @@ npm run dev
 
 **실행 방법:**
 ```bash
-cd typescript
+cd react-jsx
 npm install
 npm run dev
 ```
-
-**컴포넌트 구조:**
-- `App.jsx` - 메인 애플리케이션
-- `UserForm.jsx` - 사용자 입력 폼
-- `UserList.jsx` - 사용자 목록 및 편집
 
 ### 4️⃣ React + TypeScript (TSX)
 - **위치**: `./react-tsx/`
@@ -76,7 +65,7 @@ npm run dev
 
 **실행 방법:**
 ```bash
-cd typescript
+cd react-tsx
 npm install
 npm run dev
 ```
