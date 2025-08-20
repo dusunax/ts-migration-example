@@ -20,15 +20,12 @@ ts-migration-example/
 - JavaScript에서 TypeScript로 프로젝트를 마이그레이션하는 예시를 코드로 이해
 - 타입 안전성의 이점 체험
 
-## 마이그레이션 단계
+## 마이그레이션 예제
 
 ### 1️⃣ JavaScript (기본)
 - **위치**: `./javascript/`
 - **기술 스택**: Vanilla JavaScript, ES6+
-- **특징**: 
-  - 클래스 기반 사용자 관리 시스템
-  - 기본적인 CRUD 기능
-  - 타입 검사 없음
+- **README**: [Link](https://github.com/dusunax/ts-migration-example/tree/main/javascript)
 
 **실행 방법:**
 ```bash
@@ -40,11 +37,7 @@ npm run dev
 ### 2️⃣ TypeScript (마이그레이션)
 - **위치**: `./typescript/`
 - **기술 스택**: TypeScript
-- **특징**:
-  - JavaScript 코드에 타입 추가
-  - 인터페이스와 타입 정의
-  - 컴파일 시점에 타입 검사
-  - 향상된 IDE 지원
+- **README**: [Link](https://github.com/dusunax/ts-migration-example/tree/main/typescript)
 
 **실행 방법:**
 ```bash
@@ -62,11 +55,7 @@ npm run dev
 ### 3️⃣ React + JSX
 - **위치**: `./react-jsx/`
 - **기술 스택**: React 18, JSX, JavaScript
-- **특징**:
-  - 컴포넌트 기반 UI 구조
-  - React Hooks 사용
-  - 사용자 상호작용
-  - Props를 통한 데이터 전달
+- **README**: [Link](https://github.com/dusunax/ts-migration-example/tree/main/react-jsx)
 
 **실행 방법:**
 ```bash
@@ -83,11 +72,7 @@ npm run dev
 ### 4️⃣ React + TypeScript (TSX)
 - **위치**: `./react-tsx/`
 - **기술 스택**: React 18, TypeScript, TSX
-- **특징**:
-  - 모든 컴포넌트에 타입 정의
-  - Props 타입 안전성
-  - 이벤트 핸들러 타입 지정
-  - 상태 관리 타입 안전성
+- **README**: [Link](https://github.com/dusunax/ts-migration-example/tree/main/react-tsx)
 
 **실행 방법:**
 ```bash
@@ -95,12 +80,6 @@ cd typescript
 npm install
 npm run dev
 ```
-
-**TypeScript 특징:**
-- `User`, `UserFormData` 인터페이스
-- 컴포넌트 Props 타입 정의
-- 이벤트 핸들러 타입 안전성
-- `useState`와 `useEffect`의 타입 추론
 
 ## 🛠️ 마이그레이션 전략
 
