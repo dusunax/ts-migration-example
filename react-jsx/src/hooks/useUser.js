@@ -1,9 +1,5 @@
 import { useState } from 'react'
 
-/**
- * 사용자 관리를 위한 커스텀 훅
- * JavaScript 버전 - 타입 검사 없음
- */
 function useUser() {
   const [users, setUsers] = useState([])
   const [nextId, setNextId] = useState(1)

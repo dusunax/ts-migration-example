@@ -9,7 +9,7 @@ function UserForm({ onAddUser }: UserFormProps) {
   const [formData, setFormData] = useState<UserFormData>({
     name: '',
     email: '',
-    age: ''
+    age: 0
   })
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
@@ -20,13 +20,13 @@ function UserForm({ onAddUser }: UserFormProps) {
       return
     }
 
-    if (parseInt(formData.age) <= 0) {
+    if (formData.age <= 0) {
       alert('올바른 나이를 입력해주세요!')
       return
     }
 
     onAddUser(formData)
-    setFormData({ name: '', email: '', age: '' })
+    setFormData({ name: '', email: '', age: 0 })
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -71,7 +71,7 @@ function UserForm({ onAddUser }: UserFormProps) {
           type="number"
           id="age"
           name="age"
-          value={formData.age}
+          value={formData.age || ''}
           onChange={handleChange}
           placeholder="나이를 입력하세요"
           min="1"

@@ -1,4 +1,3 @@
-// TypeScript 타입 정의
 export interface User {
   id: number;
   name: string;
@@ -7,14 +6,5 @@ export interface User {
   createdAt: string;
 }
 
-export interface UserFormData {
-  name: string;
-  email: string;
-  age: string;
-}
-
-export interface UserUpdate {
-  name?: string;
-  email?: string;
-  age?: number;
-}
+export type UserFormData = Pick<User, 'name' | 'email' | 'age'>;
+export type UserUpdate = Partial<Pick<User, 'name' | 'email' | 'age'>>;

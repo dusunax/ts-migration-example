@@ -3,31 +3,36 @@ import { User, UserFormData } from '../types/User'
 
 const useUser = () => {
   const [users, setUsers] = useState<User[]>([])
-  const [nextId, setNextId] = useState<number>(1)
+  const [nextId, setNextId] = useState<User['id']>(1)
 
-  const addUser = (userData: UserFormData): void => {
+  const addUser = (userData: UserFormData) => {
     const newUser: User = {
       id: nextId,
       name: userData.name,
       email: userData.email,
-      age: parseInt(userData.age),
+      age: userData.age,
       createdAt: new Date().toLocaleDateString()
     }
-    setUsers([...users, newUser])
-    setNextId(nextId + 1)
+    setUsers(prev => [...prev, newUser])
+    setNextId(prev => prev + 1)
   }
 
-  const deleteUser = (id: number): void => {
-    setUsers(users.filter(user => user.id !== id))
+  const deleteUser = (id: User['id']) => {
+    setUsers(prev => prev.filter(user => user.id !== id))
   }
 
-  const updateUser = (id: number, updates: Partial<User>): void => {
-    setUsers(users.map(user => 
+  const updateUser = (id: User['id'], updates: Partial<User>) => {
+    setUsers(prev => prev.map(user => 
       user.id === id ? { ...user, ...updates } : user
     ))
   }
 
-  return { users, addUser, deleteUser, updateUser }
+  return { 
+    users, 
+    addUser, 
+    deleteUser, 
+    updateUser 
+  }
 }
 
 export default useUser;
