@@ -1,0 +1,20 @@
+{
+  "name": "typescript-example",
+  "version": "1.0.0",
+  "description": "TypeScript migration example",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "tsx": "^4.7.1",
+    "@types/node": "^22.5.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

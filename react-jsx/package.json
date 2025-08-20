@@ -1,0 +1,21 @@
+{
+  "name": "react-jsx-example",
+  "version": "1.0.0",
+  "description": "React with JSX example",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5252",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^7.1.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
